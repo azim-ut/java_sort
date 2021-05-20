@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f53b57;
+}
+
+.navigation {
+  position: relative;
+  background: #fff;
+  border-radius: 35px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
+}
+
+.navigation .indicator {
+  display: block;
+  transition: .5s;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  visibility: hidden;
+}
+.navigation .indicator::before {
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navigation .indicator.on {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.navigation ul {
+  display: flex; margin: 0;
+}
+
+.navigation ul li {
+  list-style: none;
+  width: 70px;
+  text-align: center;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation ul li a .icon {
+  font-size: 25px;
+  color: #333;
+  transition: .5s;
+  height: 70px;
+}
+
+.navigation ul li.active a .icon {
+  color: #fff;
+}
+
+.navigation ul li a .title {
+  left: 50%;
+  top: -50px;
+  position: absolute;
+  transform: translate(-50%, 15%);
+  color: #35495e;
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+}
+
+.navigation ul li.active a .title {
+  background-color: #333333;
+  color: white;
+}
+
+.navigation ul li:hover a .title {
+  visibility: visible;
+  opacity: 1;
+}
+
+.section {
+  background: #000;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section .tool{
+  position: absolute;
+  background: rgba(255,255,255, .8);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.section .icon{
+  font-size: 200%;
+}
