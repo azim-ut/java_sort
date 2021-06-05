@@ -5,5 +5,5 @@ public enum SortType {
     QUICK_SORT,
     INSERTION_SORT,
     HEAP_SORT,
-
+    SELECTION_SORT
 }

@@ -49,6 +49,7 @@ export default {
         {title: "Quick Sort", icon: ['fas', 'fighter-jet'], sortType: "QUICK_SORT", active: false, itr: 0},
         {title: "Insertion Sort", icon: ['fas', 'paste'], sortType: "INSERTION_SORT", active: false, itr: 0},
         {title: "Heap Sort", icon: ['fas', 'cubes'], sortType: "HEAP_SORT", active: false, itr: 0},
+        {title: "Selection Sort", icon: ['fas', 'check'], sortType: "SELECTION_SORT", active: false, itr: 0}
       ]
     }
   },

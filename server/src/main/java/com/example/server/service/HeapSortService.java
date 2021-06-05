@@ -9,6 +9,7 @@ import com.example.server.bean.Line;
 
 @Service
 public class HeapSortService extends SortService {
+
     @Override
     protected List<Line> sortList(String target, List<Line> list) {
         this.buildHeap(target, list);
@@ -28,8 +29,8 @@ public class HeapSortService extends SortService {
 
     private void heapify(String target, List<Line> list, int size, int i) {
         int largest = i;
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
+        int left = i * 2 + 1;
+        int right = i * 2 + 2;
         if (left < size && list.get(left).needToReplace(list.get(largest))) {
             largest = left;
         }
